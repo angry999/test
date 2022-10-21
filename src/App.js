@@ -50,11 +50,11 @@ function App() {
   return (
     <>
       <div className="App">
-        <header className="font-semibold text-base text-blueGray-700 p-8">
+        <header className="font-semibold text-2xl text-blueGray-700 p-8">
           pinballmap
         </header>
       </div>
-      <div className="w-200 flex justify-center flex-col">
+      <div className="w-200 flex justify-center flex-col px-4">
         <div className="w-full lg:w-6/12 px-4">
           <div className="relative w-full mb-3">
             <label
