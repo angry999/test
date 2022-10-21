@@ -48,56 +48,56 @@ function App() {
   };
 
   return (
-    <>
-      <div className="App">
-        <header className="font-semibold text-2xl text-blueGray-700 p-8">
-          pinballmap
-        </header>
-      </div>
+    <div className="max-w-screen-xl m-auto">
+      <header className="font-semibold text-xl text-blueGray-700 uppercase text-center p-8">
+        pinball map
+      </header>
       <div className="w-200 flex justify-center flex-col px-4">
-        <div className="w-full lg:w-6/12 px-4">
-          <div className="relative w-full mb-3">
-            <label
-              className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-              latitude
-            </label>
-            <input
-              type="text"
-              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
-              onChange={(e) => changeLat(e)}
-              value={lat}
-            />
+        <div className="flex flex-row mb-3">
+          <div className="w-40 lg:w-6/12 px-4 mr-4">
+            <div className="relative w-full mb-3">
+              <label
+                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                latitude
+              </label>
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
+                onChange={(e) => changeLat(e)}
+                value={lat}
+              />
+            </div>
           </div>
-        </div>
-        <div className="w-full lg:w-6/12 px-4">
-          <div className="relative w-full mb-3">
-            <label
-              className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-              htmlFor="grid-password"
-            >
-              longitude
-            </label>
-            <input
-              type="text"
-              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
-              onChange={(e) => changeLong(e)}
-              value={lon}
-            />
+          <div className="w-40 lg:w-6/12 px-4 mr-4">
+            <div className="relative w-full mb-3">
+              <label
+                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                longitude
+              </label>
+              <input
+                type="text"
+                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
+                onChange={(e) => changeLong(e)}
+                value={lon}
+              />
+            </div>
+          </div>
+          <div className="w-40 lg:w-6/12 px-4 mt-0">
+            <div className="relative w-full">
+              <button
+                className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
+                onClick={() => getCurrentLocation()}
+              >
+                Near Me
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-6/12 px-4">
-          <div className="relative w-full mb-3">
-            <button
-              className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
-              onClick={() => getCurrentLocation()}
-            >
-              Near Me
-            </button>
-          </div>
-        </div>
         <div className="w-full lg:w-6/12 px-4">
           <div className="relative w-full mb-3">
             <button
@@ -110,7 +110,7 @@ function App() {
         </div>
         {locations && <Locations locations={locations} />}
       </div>
-    </>
+    </div>
   );
 }
 

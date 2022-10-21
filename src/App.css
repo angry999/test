@@ -4155,3 +4155,39 @@ select {
 }
 
 @media (min-width: 1536px) {}
+
+.max-w-screen-xl {
+    max-width: 1280px;
+}
+
+.m-auto {
+    margin: auto
+}
+
+.w-40 {
+    width: 12rem;
+}
+
+.bg-sky-600 {
+    background-color: rgb(2 132 199);
+}
+
+.bg-sky-700 {
+    background-color: rgb(3 105 161);
+}
+
+.hover:bg-sky-800 {
+    background-color: rgb(7 89 133);
+}
+
+.bg-sky-900 {
+    background-color: rgb(12 74 110);
+}
+
+.hover:text-white {
+    color: white
+}
+
+.text-white:hover {
+    color: white
+}
