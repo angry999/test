@@ -3,10 +3,10 @@ import "./App.css";
 import Locations from "./Locations";
 
 function App() {
-  // const [lon, setLon] = useState("");
-  // const [lat, setLat] = useState("");
-  const [lon, setLon] = useState("-80.143059");
-  const [lat, setLat] = useState("25.958055");
+  const [lon, setLon] = useState("");
+  const [lat, setLat] = useState("");
+  // const [lon, setLon] = useState("-80.143059");
+  // const [lat, setLat] = useState("25.958055");
   const [locations, setLocations] = useState([]);
 
   const getCurrentLocation = () => {
@@ -43,6 +43,7 @@ function App() {
     let response_json = await res.json();
     if (response_json.locations) {
       setLocations(response_json.locations);
+      console.log(response_json.locations)
     }
     if (response_json.errors) {
       alert(response_json.errors);

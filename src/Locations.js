@@ -10,27 +10,31 @@ function Locations({ locations }) {
         </label>
       </div>
       <div className="relative w-full mb-3">
-        {locations && (
-          <table>
-            <tr>
-              <th className="w-20">City</th>
-              <th className="w-20">Latitude</th>
-              <th className="w-20">Longitude</th>
-              <th className="w-20">Distance</th>
-            </tr>
-            {locations.map((location) => {
-              return (
-                <tr
-                  className="text-base font-semibold pb-4"
-                  key={location.id}
-                >
-                  <td> {location.city} </td>
-                  <td> {location.lat} </td>
-                  <td> {location.lon} </td>
-                  <td className="text-right"> {location.distance} </td>
-                </tr>
-              );
-            })}
+        {locations.length > 0 && (
+          <table className="text-center">
+            <thead>
+              <tr>
+                <th>Address</th>
+                <th className="w-20">Latitude</th>
+                <th className="w-20">Longitude</th>
+                <th className="w-20">Distance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {locations.map((location) => {
+                return (
+                  <tr
+                    className="text-base font-semibold pb-4"
+                    key={location.id}
+                  >
+                    <td className="text-left"> {`${location.street}, ${location.city}, ${location.country}`} </td>
+                    <td> {location.lat} </td>
+                    <td> {location.lon} </td>
+                    <td className="text-right"> {location.distance} </td>
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
         )}
       </div>
