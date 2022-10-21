@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="max-w-screen-xl m-auto">
-      <header className="font-semibold text-xl text-blueGray-700 uppercase text-center p-8">
+      <header className="font-bold text-2xl text-blueGray-700 uppercase text-center p-8">
         pinball map
       </header>
       <div className="w-200 flex justify-center flex-col px-4">

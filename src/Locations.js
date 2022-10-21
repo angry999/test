@@ -3,7 +3,7 @@ function Locations({ locations }) {
     <div className="w-full">
       <div className="relative w-full mt-3 mb-4">
         <label
-          className="block uppercase text-blueGray-600 text-2xl font-bold mb-2"
+          className="block uppercase text-blueGray-600 text-xl font-semibold mb-2"
           htmlFor="grid-password"
         >
           {locations.length > 0 ? "pinball locations" : "There is no result"}
