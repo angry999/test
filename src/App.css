@@ -4176,7 +4176,7 @@ select {
     background-color: rgb(3 105 161);
 }
 
-.hover:bg-sky-800 {
+.bg-sky-800 {
     background-color: rgb(7 89 133);
 }
 
@@ -4184,10 +4184,10 @@ select {
     background-color: rgb(12 74 110);
 }
 
-.hover:text-white {
-    color: white
+button:hover {
+    background-color: rgb(7 89 133);
 }
 
-.text-white:hover {
-    color: white
+.w-20 {
+    width: 20%;
 }

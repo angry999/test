@@ -3,8 +3,10 @@ import "./App.css";
 import Locations from "./Locations";
 
 function App() {
-  const [lon, setLon] = useState("");
-  const [lat, setLat] = useState("");
+  // const [lon, setLon] = useState("");
+  // const [lat, setLat] = useState("");
+  const [lon, setLon] = useState("-80.143059");
+  const [lat, setLat] = useState("25.958055");
   const [locations, setLocations] = useState([]);
 
   const getCurrentLocation = () => {
@@ -89,7 +91,7 @@ function App() {
           <div className="w-40 lg:w-6/12 px-4 mt-0">
             <div className="relative w-full">
               <button
-                className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
                 onClick={() => getCurrentLocation()}
               >
                 Near Me
@@ -101,14 +103,14 @@ function App() {
         <div className="w-full lg:w-6/12 px-4">
           <div className="relative w-full mb-3">
             <button
-              className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
+              className="inline-flex justify-center rounded-md border border-transparent bg-sky-600 px-9 py-4 text-base font-semibold font-'Inter' text-gray-50 hover:bg-sky-800 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 w-full border-2"
               onClick={() => handleSearch()}
             >
               Search
             </button>
           </div>
         </div>
-        {locations && <Locations locations={locations} />}
+        <Locations locations={locations} />
       </div>
     </div>
   );
